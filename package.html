@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Package Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Package Management</h1>
+    </header>
+    <main>
+      <label for="personSelect">Select Person:</label>
+      <select id="personSelect"></select>
+      <label for="fetchOption">Fetch Option:</label>
+      <select id="fetchOption">
+        <option value="ALL">All</option>
+        <option value="ALLREC">All (received)</option>
+        <option value="ALLSENT">All (sent)</option>
+        <option value="EMPLOYEEREG">Registered by an employee</option>
+        <option value="CLIENTSENT">Send by client</option>
+        <option value="CLIENTREC">Received by client</option>
+      </select>
+      <button id="showPackagesButton">Show Packages</button>
+      <div id="packageInfoContainer" style="display: none">
+        <h2>Packages:</h2>
+        <table id="packageList">
+          <thead>
+            <tr>
+              <th>Content</th>
+              <th>Price</th>
+              <th>Sent</th>
+              <th>Received</th>
+              <th>Sender</th>
+              <th>Receiver</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="packageListBody"></tbody>
+        </table>
+      </div>
+      <div></div>
+      <button id="createPackageButton">Create Package</button>
+      <div id="createPackageForm" style="display: none">
+        <h2 id="packageFormTitle">Create New Package</h2>
+        <form id="packageForm">
+          <div>
+            <label for="contentInput">Content:</label>
+            <input id="contentInput" name="contentInput" required></input>
+          </div>
+          <div>
+            <label for="priceInput">Price:</label>
+            <input id="priceInput" name="priceInput" required></input>
+          </div>
+          <div>
+            <label for="senderSelect">Sender:</label>
+            <select id="senderSelect" name="senderSelect" required></select>
+          </div>
+          <div>
+            <label for="receiverSelect">Receiver:</label>
+            <select id="receiverSelect" name="receiverSelect" required></select>
+          </div>
+          <div>
+            <label for="employeeSelect">Employee:</label>
+            <select id="employeeSelect" name="employeeSelect" required></select>
+          </div>
+          <div>
+            <label for="senderOfficeSelect">Sender Office:</label>
+            <select
+              id="senderOfficeSelect"
+              name="senderOfficeSelect"
+              required
+            ></select>
+          </div>
+          <div>
+            <label for="receiverOfficeSelect">Receiver Office:</label>
+            <select
+              id="receiverOfficeSelect"
+              name="receiverOfficeSelect"
+              required
+            ></select>
+          </div>
+          <button type="submit" id="packageFormSubmitButton">Create</button>
+        </form>
+      </div>
+      <div id="createPackageFormDiv" style="display: none">
+        <div>
+          <label for="senderSelect">Sender:</label>
+          <select id="senderSelect" name="senderSelect" required></select>
+        </div>
+        <div>
+          <label for="receiverSelect">Receiver:</label>
+          <select id="receiverSelect" name="receiverSelect" required></select>
+        </div>
+        <div>
+          <label for="employeeSelect">Employee:</label>
+          <select id="employeeSelect" name="employeeSelect" required></select>
+        </div>
+        <div>
+          <label for="senderOfficeSelect">Sender Office:</label>
+          <select
+            id="senderOfficeSelect"
+            name="senderOfficeSelect"
+            required
+          ></select>
+        </div>
+        <div>
+          <label for="receiverOfficeSelect">Receiver Office:</label>
+          <select
+            id="receiverOfficeSelect"
+            name="receiverOfficeSelect"
+            required
+          ></select>
+        </div>
+      </div>
+      <div id="errorMessage" style="display: none"></div>
+      <button id="backButton">Back</button>
+    </main>
+    <script type="module" src="js/package.js"></script>
+  </body>
+</html>
