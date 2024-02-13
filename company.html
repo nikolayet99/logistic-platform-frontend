@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Company Management</h1>
+    </header>
+    <main>
+      <button id="showCompanysButton">Show Companies</button>
+      <div id="companyInfoContainer" style="display: none">
+        <h2>Companies:</h2>
+        <table id="companyList">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="companyListBody"></tbody>
+        </table>
+      </div>
+      <button id="createCompanyButton">Create Company</button>
+      <div id="createCompanyForm" style="display: none">
+        <h2 id="companyFormTitle">Create New Company</h2>
+        <form id="companyForm">
+          <div>
+            <label for="companyName">Name:</label>
+            <input type="text" id="companyName" name="companyName" required />
+          </div>
+          <button type="submit" id="companyFormSubmitButton">Create</button>
+        </form>
+      </div>
+      <div id="errorMessage" style="display: none"></div>
+      <button id="backButton">Back</button>
+    </main>
+    <script type="module" src="js/company.js"></script>
+  </body>
+</html>
