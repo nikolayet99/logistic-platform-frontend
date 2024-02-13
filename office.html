@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Office Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Office Management</h1>
+    </header>
+    <main>
+      <button id="showOfficesButton">Show Offices</button>
+      <div id="officeInfoContainer" style="display: none">
+        <h2>Offices:</h2>
+        <table id="officeList">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Phone Number</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="officeListBody"></tbody>
+        </table>
+      </div>
+      <button id="createOfficeButton">Create Office</button>
+      <div id="createOfficeForm" style="display: none">
+        <h2 id="officeFormTitle">Create New Office</h2>
+        <form id="officeForm">
+          <div>
+            <label for="officeName">Name:</label>
+            <input type="text" id="officeName" name="officeName" required />
+          </div>
+          <div>
+            <label for="officeEmail">Email:</label>
+            <input type="email" id="officeEmail" name="officeEmail" required />
+          </div>
+          <div>
+            <label for="officeAddress">Address:</label>
+            <input
+              type="text"
+              id="officeAddress"
+              name="officeAddress"
+              required
+            />
+          </div>
+          <div>
+            <label for="officePhoneNumber">Phone Number:</label>
+            <input
+              type="text"
+              id="officePhoneNumber"
+              name="officePhoneNumber"
+              required
+            />
+          </div>
+          <button type="submit" id="officeFormSubmitButton">Create</button>
+        </form>
+      </div>
+      <div id="errorMessage" style="display: none"></div>
+      <button id="backButton">Back</button>
+    </main>
+    <script type="module" src="js/office.js"></script>
+  </body>
+</html>
