@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Your Dashboard</h1>
+    </header>
+    <main id="dashboardContent">
+      <div id="errorMessage" style="display: none">
+        <h2>Error: Unknown or missing role</h2>
+        <p>Please login/register to access the dashboard.</p>
+      </div>
+      <div id="employeeContent" style="display: none">
+        <h2>Welcome, Employee!</h2>
+        <button id="employeeButton" onclick="redirectToEmployee()">
+          Employee
+        </button>
+        <button id="clientButton" onclick="redirectToClient()">Client</button>
+        <button id="packageButton" onclick="redirectToPackage()">
+          Package
+        </button>
+        <button id="financeButton" onclick="redirectToFinance()">
+          Finance
+        </button>
+        <button id="officeButton" onclick="redirectToOffice()">Office</button>
+        <button id="companyButton" onclick="redirectToCompany()">
+          Company
+        </button>
+      </div>
+      <div id="clientContent" style="display: none">
+        <h2>Welcome, Client!</h2>
+        <button id="packageButton" onclick="redirectToPackage()">
+          Package
+        </button>
+      </div>
+      <div id="otherButtons"></div>
+      <button id="logoutButton">Logout</button>
+    </main>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
