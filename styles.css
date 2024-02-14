@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+form {
+  margin-top: 20px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#errorMessage {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffcccc;
+  color: #990000;
+  border-radius: 4px;
+}
+
+#officeList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#officeList li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+#officeFormTitle {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 10px;
+    max-width: 90%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: calc(100% - 16px);
+  }
+}
